@@ -23,23 +23,22 @@ def scrape_init():
 
 def scrape_title(html):
 
-	# Find book title
-	title_re = "<a href=.*?.*?</a.*?>" # First 'title' tag and the '/title' tag that comes after.
-	match_results = re.search(title_re, html, re.IGNORECASE)
-	title = match_results.group()
-	title = re.sub("<.*?>", "", title) # Remove tags
+	# Find all titles
+	title_re = '<a href=.*?title=.*?</a.*?>' # First 'title' tag and the '/title' tag that comes after.
+	title_results = re.findall(title_re, html, re.IGNORECASE)
 
-	print(title)
+	title_results[:] = [re.sub("<.*?>", "", entry) for entry in title_results]
+
+	#title = match_results.group()
+	#title = re.sub("<.*?>", "", title) # Remove tags
+
+	print(title_results)
 
 	return
 
 def scrape_price(html): # For books.toscrape.com
 
 	# Find price
-	pricetag_index = html.find("<p class='price_color'>")
-	start_index = pricetag_index + len("<p class='price_color'>")
-	end_index = html.find("</p>")
-	price = html[start_index:end_index]
 
 	print(price)
 
