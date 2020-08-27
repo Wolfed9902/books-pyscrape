@@ -27,7 +27,7 @@ def scrape_title(html):
 	title_re = '<a href=.*?title=.*?</a.*?>' # First 'title' tag and the '/title' tag that comes after.
 	title_results = re.findall(title_re, html, re.IGNORECASE)
 
-	title_results[:] = [re.sub("<.*?>", "", entry) for entry in title_results]
+	title_results[:] = [re.sub('<.*?title="', '', entry) for entry in title_results]
 
 	#title = match_results.group()
 	#title = re.sub("<.*?>", "", title) # Remove tags
