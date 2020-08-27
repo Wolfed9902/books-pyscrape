@@ -53,9 +53,9 @@ raw_html = scrape_init()
 title_list = scrape_title(raw_html)
 price_list = scrape_price(raw_html)
 
+# Creates a dictionary that contains titles with matching prices. 
 combined_list = {title_list[entry]: price_list[entry] for entry in range(len(price_list))}
 
 print(combined_list)
-
 
 input('Press Enter to end the program.')
