@@ -30,9 +30,9 @@ def scrape_title(html):
 	title_results[:] = [re.sub('<.*?title="', "", entry) for entry in title_results] # Subtract left-side filler
 	title_results[:] = [re.sub('".*?a>', '', entry) for entry in title_results] # Subtract right-side filler
 
-	print(title_results)
+	#print(title_results)
 
-	return
+	return(title_results)
 
 def scrape_price(html): # For books.toscrape.com
 
@@ -42,16 +42,20 @@ def scrape_price(html): # For books.toscrape.com
 
 	price_results[:] = [re.sub('<.*?>', "", entry) for entry in price_results]
 
-	print(price_results)
+	#print(price_results)
 
-	return
+	return(price_results)
 
 #-- MAIN --#
 
 raw_html = scrape_init()
 
-scrape_title(raw_html)
-scrape_price(raw_html)
+title_list = scrape_title(raw_html)
+price_list = scrape_price(raw_html)
+
+combined_list = {title_list[entry]: price_list[entry] for entry in range(len(price_list))}
+
+print(combined_list)
 
 
 input('Press Enter to end the program.')
