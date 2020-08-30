@@ -52,7 +52,7 @@ def scrape_page(select_num):
 	# Creates a dictionary that contains titles with matching prices.
 	combined_list = {title_list[entry]: price_list[entry] for entry in range(len(price_list))}
 
-	print(combined_list)
+	scrape_dict_output(combined_list)
 
 	return
 
@@ -61,18 +61,28 @@ def select_page():
 	# Choose page according to user input
 
 	while True:
-		select_num = input("Choose a catalogue page to scrape (1-50).")
+		select_num = input("Choose a catalogue page to scrape (1-50).\n")
 		try:
 			select_num = int(select_num)
 		except:
-			print("Please enter a number. (1-50)")
+			print("Please enter a number. (1-50)\n")
 			continue
 		if select_num < 1 or select_num > 50:
-			print("Please enter a number. (1-50)")
+			print("Please enter a number. (1-50)\n")
 			continue
 		break
 
 	scrape_page(select_num)
+
+	return
+
+def scrape_dict_output(dict):
+
+	# Nicely ordered dictionary output
+
+	print("Results:")
+	for title, price in dict.items():
+		print("{} [{}]".format(title, price))
 
 	return
 
