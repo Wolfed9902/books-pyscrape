@@ -10,3 +10,7 @@ Functionality includes scrape functions that can retrieve both book titles and p
 
 * Added a simple page selection function with input verification.
 * User can now scrape a specific page by number rather than only scrape the first.
+
+## (8/30/2020)
+
+* Modified output formatting and added improved display of scrape results.
