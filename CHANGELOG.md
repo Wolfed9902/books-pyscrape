@@ -14,3 +14,11 @@ Functionality includes scrape functions that can retrieve both book titles and p
 ## (8/30/2020)
 
 * Modified output formatting and added improved display of scrape results.
+
+## (9/10/2020)
+
+- Added pyscrape.py and extendedscrape.py
+  - pyscrape.py contains GUI functionality via tkinter module.
+  - extendedscrape.py contains core scrape functionality with pyscrape.py in mind. This will include advanced functions beyond scrape.py
+- Initialized a simple, temporary GUI.
+- User can currently use the GUI to scrape the first page of books.toscrape.com.
