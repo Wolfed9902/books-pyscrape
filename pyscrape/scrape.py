@@ -88,6 +88,9 @@ def scrape_dict_output(dict):
 
 #-- MAIN --#
 
-select_page()
+# Commented out for pyscrape.py and extendedscrape.py funtionality.
+# To use this commandline version, just remove the hashtags from the functions below.
 
-input('Press Enter to end the program.')
+#select_page()
+
+#input('Press Enter to end the program.')
