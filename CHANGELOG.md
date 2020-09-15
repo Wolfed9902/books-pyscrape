@@ -26,5 +26,5 @@ Functionality includes scrape functions that can retrieve both book titles and p
 ## (9/15/2020)
  - Modified GUI
  - User can now scrape page of their choice
-  - Added entry box for page selection
-  - Added input validation (general exception)
+   - Added entry box for page selection
+   - Added input validation (general exception)
