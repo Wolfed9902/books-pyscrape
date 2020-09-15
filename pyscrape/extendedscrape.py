@@ -5,6 +5,7 @@
 # This version of scrape.py is made specifically for use with guiscrape.py
 
 #-- Imports --#
+
 import re
 from urllib.request import urlopen
 from scrape import scrape_init, scrape_title, scrape_price
@@ -30,10 +31,15 @@ def scrape_page(select_num):
 def format_output(dict):
 
 	formatted_list = ""
+	bad_chars = ["&#39;"] # artifacts from scrape
 
 	# Nicely ordered dictionary output
 	for title, price in dict.items():
 		formatted_list += ("{} [{}]".format(title, price))
 		formatted_list += ("\n")
+
+	# Replace broken characters in list
+	for i in bad_chars:
+		formatted_list = formatted_list.replace(i,"'")
 
 	return formatted_list
