@@ -22,3 +22,9 @@ Functionality includes scrape functions that can retrieve both book titles and p
   - extendedscrape.py contains core scrape functionality with pyscrape.py in mind. This will include advanced functions beyond scrape.py
 - Initialized a simple, temporary GUI.
 - User can currently use the GUI to scrape the first page of books.toscrape.com.
+
+## (9/15/2020)
+ - Modified GUI
+ - User can now scrape page of their choice
+  - Added entry box for page selection
+  - Added input validation (general exception)
