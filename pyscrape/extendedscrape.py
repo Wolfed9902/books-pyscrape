@@ -2,7 +2,7 @@
 # Author: Dylan Wolfe
 # Date: 9/10/2020
 # This program is specifically made to be used with books.toscrape.com.
-# This version of scrape.py is made specifically for use with guiscrape.py
+# This version of scrape.py is made specifically for use with pyscrape.py
 
 #-- Imports --#
 
