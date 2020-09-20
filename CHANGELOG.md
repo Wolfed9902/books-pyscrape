@@ -28,3 +28,7 @@ Functionality includes scrape functions that can retrieve both book titles and p
  - User can now scrape page of their choice
   - Added entry box for page selection
   - Added input validation (general exception)
+
+## (9/20/2020)
+ - Scraping a page now creates a file with scrape results in directory 'pyscrape'.
+  - File is currently overwritten each scrape.
