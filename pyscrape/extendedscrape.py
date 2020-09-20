@@ -43,3 +43,11 @@ def format_output(dict):
 		formatted_list = formatted_list.replace(i,"'")
 
 	return formatted_list
+
+def write_to_file(list):
+
+	output_file = open("scrape_output.txt", "w")
+	output_file.write(list)
+	output_file.close
+
+	return

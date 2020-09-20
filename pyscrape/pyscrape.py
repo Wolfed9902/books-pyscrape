@@ -7,7 +7,7 @@
 
 from tkinter import *
 from tkinter import messagebox
-from extendedscrape import scrape_page
+from extendedscrape import scrape_page, write_to_file
 
 root = Tk()
 root.title('books-pyscrape (https://github.com/Wolfed9902)')
@@ -21,6 +21,7 @@ def start_scrape():
         page_num = int(page_select.get()) # Get page from page_select entry, check for int
         result_output = scrape_page(page_num)
         messagebox.showinfo("Results", result_output)
+        write_to_file(result_output)
     except:
         messagebox.showerror("Error", "Please enter a valid number (1-50).")
 
