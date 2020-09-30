@@ -6,3 +6,6 @@ This project is a work in progress Python-based web-scraper designed to retrieve
 This web-scraper currently uses books.toscrape.com as the default website for data retrieval.
 
 A list of changes and current features/functionality can be found within the [Changelog](https://github.com/Wolfed9902/books-pyscrape/blob/master/CHANGELOG.md).
+
+Screenshot of the current build of books-pyscrape:
+![Example](https://github.com/Wolfed9902/books-pyscrape/blob/master/assets/img/example.png)
