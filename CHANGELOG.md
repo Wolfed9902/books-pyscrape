@@ -31,4 +31,4 @@ Functionality includes scrape functions that can retrieve both book titles and p
 
 ## (9/20/2020)
  - Scraping a page now creates a file with scrape results in directory 'pyscrape'.
-  - File is currently overwritten each scrape.
+   - File is currently overwritten each scrape.
