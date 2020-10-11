@@ -14,14 +14,14 @@ from scrape import scrape_init, scrape_title, scrape_price
 
 def scrape_page(select_num):
 
-	# Call func to retreive page html.
+	# Call func to retreive page html
 	raw_html = scrape_init(select_num)
 
-	# Call funcs to extract titles and prices.
+	# Call funcs to extract titles and prices
 	title_list = scrape_title(raw_html)
 	price_list = scrape_price(raw_html)
 
-	# Creates a dictionary that contains titles with matching prices.
+	# Creates a dictionary that contains titles with matching prices
 	combined_list = {title_list[entry]: price_list[entry] for entry in range(len(price_list))}
 
 	formatted_list = format_output(combined_list)
@@ -49,5 +49,11 @@ def write_to_file(list):
 	output_file = open("scrape_output.txt", "w")
 	output_file.write(list)
 	output_file.close
+
+	return
+
+def search_title(title):
+
+	# TODO - Search for a title within the catalogue
 
 	return

@@ -7,7 +7,7 @@
 
 from tkinter import *
 from tkinter import messagebox
-from extendedscrape import scrape_page, write_to_file
+from extendedscrape import scrape_page, write_to_file, search_title
 
 root = Tk()
 root.title('books-pyscrape (https://github.com/Wolfed9902)')
@@ -41,5 +41,14 @@ page_select.grid(row=2, column=0, columnspan=6, padx=10, pady=10)
 
 button_scrape = Button(root, text="Scrape Page", command=start_scrape)
 button_scrape.grid(row=3, column=0, columnspan=6, pady=10, padx=10)
+
+page_label = Label(root, text="Search for a book title:")
+page_label.grid(row=4, column=0, columnspan=6, padx=10, pady=10)
+
+page_select = Entry(root, width=25)
+page_select.grid(row=5, column=0, columnspan=6, padx=10, pady=10)
+
+button_scrape = Button(root, text="Search", command=search_title)
+button_scrape.grid(row=6, column=0, columnspan=6, pady=10, padx=10)
 
 root.mainloop()
