@@ -45,10 +45,10 @@ button_scrape.grid(row=3, column=0, columnspan=6, pady=10, padx=10)
 page_label = Label(root, text="Search for a book title:")
 page_label.grid(row=4, column=0, columnspan=6, padx=10, pady=10)
 
-page_select = Entry(root, width=25)
-page_select.grid(row=5, column=0, columnspan=6, padx=10, pady=10)
+entry_search = Entry(root, width=25)
+entry_search.grid(row=5, column=0, columnspan=6, padx=10, pady=10)
 
-button_scrape = Button(root, text="Search", command=search_title)
-button_scrape.grid(row=6, column=0, columnspan=6, pady=10, padx=10)
+button_search = Button(root, text="Search", command=search_title)
+button_search.grid(row=6, column=0, columnspan=6, pady=10, padx=10)
 
 root.mainloop()
