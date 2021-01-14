@@ -52,8 +52,17 @@ def write_to_file(list):
 
 	return
 
-def search_title(title):
+def search_title(book_title):
 
 	# TODO - Search for a title within the catalogue
 
-	return
+	i = 1
+	title = book_title
+	total_scrape = ""
+
+	i = 1
+	while i < 4: # scrape the first three pages
+		i += 1
+		total_scrape += scrape_page(i)
+
+	return total_scrape
