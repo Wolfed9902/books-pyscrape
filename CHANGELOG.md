@@ -39,5 +39,5 @@ Functionality includes scrape functions that can retrieve both book titles and p
 ## (10/25/2020)
  - Fixed bug with duplicate button/entry widget names
 
-## (1/14/2020)
+## (1/14/2021)
  - Preparation for title search implementation
