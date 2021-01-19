@@ -57,12 +57,19 @@ def search_title(book_title):
 	# TODO - Search for a title within the catalogue
 
 	i = 1
+	page_total = 3 # TODO - set to full amount
 	title = book_title
-	total_scrape = ""
+	current_scrape = ""
 
 	i = 1
-	while i < 4: # scrape the first three pages
-		i += 1
-		total_scrape += scrape_page(i)
+	while i < page_total: # scrape until title found
 
-	return total_scrape
+		i += 1
+		current_scrape = scrape_page(i)
+
+		result = re.search(title, current_scrape)
+
+		if (result.string != "None"):
+			return result
+
+	return current_scrape
