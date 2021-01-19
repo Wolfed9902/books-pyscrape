@@ -59,7 +59,9 @@ def search_title(book_title):
 	i = 1
 	page_total = 3 # TODO - set to full amount
 	title = book_title
-	current_scrape = ""
+	current_scrape = " "
+	result = " "
+	error_line = "No result."
 
 	i = 1
 	while i < page_total: # scrape until title found
@@ -67,9 +69,12 @@ def search_title(book_title):
 		i += 1
 		current_scrape = scrape_page(i)
 
-		result = re.search(title, current_scrape)
+		reg_result = re.findall(title, current_scrape, re.IGNORECASE) # TODO - capture full matching lines
+		print(reg_result) # temp
 
-		if (result.string != "None"):
+		result = result.join(reg_result) # turn reg result into string
+
+		if (result != ""):
 			return result
 
-	return current_scrape
+	return error_line
