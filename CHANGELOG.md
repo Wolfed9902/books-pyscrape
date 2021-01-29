@@ -41,3 +41,9 @@ Functionality includes scrape functions that can retrieve both book titles and p
 
 ## (1/14/2021)
  - Preparation for title search implementation
+
+## (1/29/2021)
+ - Basic title search functionality implemented
+  - Search only writes to scrape_output.txt as of currently
+  - Search only returns first pages
+  - Search is broad and returns any title with matching letter/word
